@@ -1,0 +1,217 @@
+:root {
+  --main-color1-red: #f3471c;
+  --main-color2-blue: #45567d;
+  --main-color3-gray: #303841;
+  --main-color4-white: #faf8f8;
+  --main-color5-red-100: #ffe0e0a9;
+  --main-color5-gradient: linear-gradient(62deg, #686c70 0%, #181719 100%);
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-color4-white);
+}
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color4-white);
+}
+
+/*Navigation bar*/
+nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--main-color1-red);
+  z-index: 10;
+  box-shadow: 0 2px 0 var(--main-color3-gray);
+  height: 4.5rem;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  margin-right: 2rem;
+  list-style: none;
+}
+nav a {
+  display: block;
+  padding: 2rem;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+nav a:hover {
+  color: var(--main-color5-red-100);
+}
+
+/*Welcome Section*/
+.welcome-section {
+  background-color: var(--main-color3-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: var(--main-color5-gradient);
+}
+.welcome-section > p {
+  font-size: 2.5rem;
+  color: var(--main-color1-red);
+  font-style: italic;
+  font-weight: 200;
+}
+
+/*Project section*/
+.project-section {
+  background-color: var(--main-color2-blue);
+  text-align: center;
+  padding: 10rem 2rem;
+  width: 100%;
+}
+.project-section > h2 {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-color4-white);
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+.project {
+  background-color: var(--main-color3-gray);
+  box-shadow: 1px 1px 2px var(--main-color3-gray);
+  border-radius: 2px;
+}
+.project-grid > a {
+  transition: all 0.5s ease;
+}
+.project-grid > a:hover {
+  transform: scale(1.05);
+  color: var(--main-color1-red);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+.project-title {
+  font-size: 1.5rem;
+  padding: 2rem 0.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-color3-gray);
+  transition: all 0.5s ease;
+}
+.btn-show-all > img {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--main-color4-white);
+  border-radius: 50%;
+  padding-top: 5px;
+  float: right;
+  margin-left: 1rem;
+  margin-top: 5px;
+}
+.btn-show-all:hover {
+  background-color: var(--main-color1-red);
+  color: var(--main-color4-white);
+}
+
+/*Contact section*/
+.contact-section {
+  background-color: var(--main-color3-gray);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--main-color1-red);
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.contact-section-header > h2 {
+  font-size: 3rem;
+}
+.contact-section-header > p {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.contact-details:hover {
+  text-decoration-line: underline;
+}
+
+/*Footer*/
+footer {
+  background-color: var(--main-color3-gray);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.column {
+  flex: 1;
+}
+.text-right {
+  text-align: right;
+}
+
+/* Responsive*/
+@media (max-width: 40em) {
+  html {
+    font-size: 12px;
+  }
+  .project-grid {
+    gap: 2em;
+  }
+}
